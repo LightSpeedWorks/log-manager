@@ -1,6 +1,6 @@
 {
   "name": "log-manager",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "log-manager",
   "main": "log-manager.js",
   "scripts": {
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/LightSpeedWorks/log-manager/issues"
   },
-  "homepage": "https://github.com/LightSpeedWorks/log-manager"
+  "homepage": "https://github.com/LightSpeedWorks/log-manager",
+  "dependencies": {
+    "date-time-string": ">=0.0.1"
+  }
 }
