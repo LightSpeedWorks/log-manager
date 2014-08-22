@@ -1,8 +1,8 @@
 {
   "name": "log-manager",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "log-manager",
-  "main": "log-manager.js",
+  "main": "lib/log-manager.js",
   "scripts": {
     "test": "cd test && node log-manager-test"
   },
