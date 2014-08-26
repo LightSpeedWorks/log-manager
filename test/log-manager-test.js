@@ -2,7 +2,7 @@
 
 'use strict';
 
-var LogManager = require('../log-manager');
+var LogManager = require('../lib/log-manager');
 
 LogManagerTest_test();
 
