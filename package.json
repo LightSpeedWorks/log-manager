@@ -1,7 +1,7 @@
 {
   "name": "log-manager",
-  "version": "0.0.5",
-  "description": "log-manager",
+  "version": "0.0.6",
+  "description": "Log Manager",
   "main": "lib/log-manager.js",
   "dependencies": {
     "date-time-string": ">=0.0.4"
