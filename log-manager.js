@@ -141,8 +141,7 @@ function LogManager_setWriter(writer) {
 //======================================================================
 // LogManager write 出力
 function LogManager_write() {
-  var msg = LogManager_format.apply(null,
-    arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+  var msg = LogManager_format.apply(null, arguments);
 
   this.writer.write(msg);
   if (this.writer !== process.stdout)
@@ -154,8 +153,7 @@ function LogManager_write() {
 //======================================================================
 // LogManager writeln 出力(改行)
 function LogManager_writeln() {
-  var msg = LogManager_format.apply(null,
-    arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments)) + CRLF;
+  var msg = LogManager_format.apply(null, arguments) + CRLF;
 
   this.writer.write(msg);
   if (this.writer !== process.stdout)
@@ -167,8 +165,7 @@ function LogManager_writeln() {
 //======================================================================
 // LogManager print 表示
 function LogManager_print() {
-  var msg = LogManager_format.apply(null,
-    arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments)) + CRLF;
+  var msg = LogManager_format.apply(null, arguments) + CRLF;
 
   this.writer.write(msg);
   if (this.writer !== process.stdout)
@@ -188,19 +185,15 @@ function LogManager_inspect(obj) {
 //======================================================================
 // LogManager format 整形/フォーマット
 function LogManager_format() {
-  // 引数を配列に変換
-  var args = arguments.length === 1 ? [arguments[0]] :
-             Array.apply(null, arguments);
-
-  for (var i = 0, n = args.length; i < n; ++i) {
-    if (args[i] === null)
-      args[i] = 'null';
-    else if (typeof args[i] === 'object')
-      args[i] = LogManager_inspect(args[i]);
-    else if (typeof args[i] !== 'string')
-      args[i] = '' + args[i];
+  for (var i = 0, n = arguments.length; i < n; ++i) {
+    if (arguments[i] === null)
+      arguments[i] = 'null';
+    else if (typeof arguments[i] === 'object')
+      arguments[i] = LogManager_inspect(arguments[i]);
+    else if (typeof arguments[i] !== 'string')
+      arguments[i] = '' + arguments[i];
   }
-  return util.format.apply(util, args);
+  return util.format.apply(util, arguments);
 }
 
 
@@ -252,8 +245,7 @@ function Logger_printStack() {
 // Logger printLevel {プリント・レベル}
 function Logger_printLevel(level, args) {
   // 引数をメッセージ文字列に整形
-  var msg = LogManager_format.apply(null,
-    args.length === 1 ? [args[0]] : Array.apply(null, args));
+  var msg = LogManager_format.apply(null, args);
 
   var color = COLOR_LEVELS[level].color;
   var name = COLOR_LEVELS[level].name;
@@ -267,7 +259,7 @@ function Logger_printLevel(level, args) {
   var date = toDateString();
   if (date !== this.$date) {
     this.$manager.$print(
-      COLOR_NORMAL + '     ' + COLOR_TIME + ' ' + toDateString() + '  ' + COLOR_NORMAL);
+      COLOR_NORMAL + '     ' + COLOR_TIME + '  ' + toDateString() + ' ' + COLOR_NORMAL);
     this.$date = date;
   }
 
