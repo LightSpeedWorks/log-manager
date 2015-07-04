@@ -2,7 +2,7 @@
 
 'use strict';
 
-var LogManager = require('../lib/log-manager');
+var LogManager = require('../log-manager');
 
 LogManagerTest_test();
 
@@ -112,7 +112,7 @@ setTimeout(function LogManagerTest_onTimeout() {
   log.fatal('test fatal %s %d', 'arg1', 2);
 
   var LogWriter = require('log-writer');
-  LogManager.setWriter(new LogWriter('log-manager-test-%s.log'));
+  LogManager.setWriter(new LogWriter('log-manager-ex-%s.log'));
   var log = LogManager.getLogger();
   log.trace('test trace %s %d', 'arg1', 2);
   log.debug('test debug %s %d', 'arg1', 2);
