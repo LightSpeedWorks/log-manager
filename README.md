@@ -29,3 +29,18 @@ mgr.setLevel('DEBUG');
 var log = mgr.getLogger();
 log.setLevel('WARN');
 ```
+
+```js
+var LogManager = require('log-manager');
+var LogWriter = require('log-writer');
+
+LogManager.setWriter(new LogWriter('log-manager-ex-%s.log'));
+var log = LogManager.getLogger();
+
+log.trace('test trace %s %d', 'arg1', 2);
+log.debug('test debug %s %d', 'arg1', 2);
+log.info('test info  %s %d', 'arg1', 2);
+log.warn('test warn  %s %d', 'arg1', 2);
+log.error('test error %s %d', 'arg1', 2);
+log.fatal('test fatal %s %d', 'arg1', 2);
+```
