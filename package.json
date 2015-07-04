@@ -1,13 +1,13 @@
 {
   "name": "log-manager",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Log Manager",
-  "main": "lib/log-manager.js",
+  "main": "log-manager.js",
   "dependencies": {
-    "date-time-string": ">=0.0.4"
+    "date-time-string": ">=0.0.9"
   },
   "devDependencies": {
-    "log-writer": ">=0.0.4"
+    "log-writer": ">=0.0.6"
   },
   "keywords": [
     "log",
@@ -16,7 +16,7 @@
   "homepage": "https://github.com/LightSpeedWorks/log-manager",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LightSpeedWorks/log-manager.git"
+    "url": "LightSpeedWorks/log-manager"
   },
   "bugs": {
     "url": "https://github.com/LightSpeedWorks/log-manager/issues"
