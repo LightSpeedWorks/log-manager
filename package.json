@@ -1,6 +1,6 @@
 {
   "name": "log-manager",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Log Manager",
   "main": "log-manager.js",
   "dependencies": {
