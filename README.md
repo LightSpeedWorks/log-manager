@@ -2,6 +2,15 @@
 
 # LogManager {ログ管理}
 
+
+## INSTALL:
+
+[![NPM](https://nodei.co/npm/log-manager.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/log-manager/)
+[![NPM](https://nodei.co/npm-dl/log-manager.png?height=2)](https://nodei.co/npm/log-manager/)
+
+
+## EXAMPLES:
+
 ```js
 var LogManager = require('log-manager');
 var log = LogManager.getLogger();
@@ -29,6 +38,9 @@ mgr.setLevel('DEBUG');
 var log = mgr.getLogger();
 log.setLevel('WARN');
 ```
+
+
+## LogManager and LogWriter
 
 ```js
 var LogManager = require('log-manager');
