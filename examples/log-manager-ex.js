@@ -1,4 +1,4 @@
-// log-manager-test.js
+// log-manager-ex.js
 
 'use strict';
 
