@@ -1,13 +1,13 @@
 {
   "name": "log-manager",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Log Manager",
   "main": "log-manager.js",
   "dependencies": {
     "date-time-string": ">=0.0.9"
   },
   "devDependencies": {
-    "log-writer": ">=0.0.8"
+    "log-writer": ">=0.0.9"
   },
   "keywords": [
     "log",
