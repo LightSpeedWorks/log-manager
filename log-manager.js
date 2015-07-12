@@ -178,7 +178,11 @@ function LogManager_print() {
 //======================================================================
 // LogManager inspect 探索/インスペクト
 function LogManager_inspect(obj) {
-  return util.inspect(obj, {showHidden: false, depth: null, colors: true});
+  var s = util.inspect(obj, {showHidden: false, depth: null, colors: true});
+  var s2 = s.replace(/\n /g, '');
+  var s3 = s2.replace(/\x1b\[\d*(;\d*)*m/g, '');
+  if (s3.length < 80) return s2;
+  return s;
 }
 
 
