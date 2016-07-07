@@ -70,7 +70,7 @@ var COLOR_LEVELS = [
   {no: LEVEL_WARN,  name: 'WARN ', level: 'WARN' , color: COLOR_WARN },
   {no: LEVEL_ERROR, name: 'ERROR', level: 'ERROR', color: COLOR_ERROR},
   {no: LEVEL_FATAL, name: 'FATAL', level: 'FATAL', color: COLOR_FATAL}];
-for (var i = 0; i <= 5; ++i)
+for (var i = 0; i < COLOR_LEVELS.length; ++i)
   COLOR_LEVELS[COLOR_LEVELS[i].level] = COLOR_LEVELS[i],
   COLOR_LEVELS[COLOR_LEVELS[i].level.toLowerCase()] = COLOR_LEVELS[i];
 
